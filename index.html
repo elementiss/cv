@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <title>Portfolio</title>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="icon" href="images/favicon.webp" type="image/x-icon" />
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins" />
+      <link
+         rel="stylesheet"
+         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      />
+      <style>
+         body,
+         h1,
+         h2,
+         h3,
+         h4,
+         h5 {
+            font-family: "Poppins", Inter, sans-serif;
+         }
+         body {
+            font-size: 16px;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+         }
+         h2 {
+            font-weight: bold;
+         }
+         h3 {
+            font-size: 20px;
+            font-weight: bold;
+         }
+         .section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+         }
+         .table-section table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+         }
+         .table-section th,
+         .table-section td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+         }
+         .table-section th {                                  ?
+            background-color: #f2f2f2;
+         }
+         .custom-hr {
+            width: 50px;
+            border: 5px solid red;
+            border-radius: 5px; /* Эквивалент w3-round из W3.CSS */
+         }
+      </style>
+   </head>
+   <body>
+      <!-- Sidebar/menu -->
+      <nav
+         class="w3-sidebar w3-blue-grey w3-collapse w3-top w3-large w3-padding"
+         style="z-index: 3; width: 260px; font-weight: bold"
+         id="mySidebar"
+      >
+         <br />
+         <a
+            href="javascript:void(0)"
+            onclick="w3_close()"
+            class="w3-button w3-hide-large w3-display-topleft"
+            style="width: 100%; font-size: 22px"
+            >Close Menu</a
+         >
+         <div class="w3-bar-block">
+            <a href="#fantom" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Fantom</a>
+            <a href="#arbitrator" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Arbitrator</a>
+            <a href="#ContractScore" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">ContractScore</a>
+            <a href="#sportparser" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">SportParser</a>
+            <a href="#telegramhelper" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"
+               >TelegramHelper</a
+            >
+            <a href="#BncFutures" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">BncFutures</a>
+            <a href="#promoactions" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Промоакции</a>
+            <a href="#writer" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Технический писатель</a>
+            <a href="#opinion" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Отзывы</a>
+         </div>
+      </nav>
+
+      <!-- Top menu on small screens -->
+      <header class="w3-container w3-top w3-hide-large w3-blue-grey w3-xlarge w3-padding w3-card-4">
+         <a href="javascript:void(0)" class="w3-button w3-blue-grey w3-margin-right" onclick="w3_open()">☰</a>
+         <!--          <span class="w3-padding-small"><img src="images/logo.webp" width="60px" /></span> -->
+         <span>Portfolio</span>
+      </header>
+
+      <!-- Overlay effect when opening sidebar on small screens -->
+      <div
+         class="w3-overlay w3-hide-large"
+         onclick="w3_close()"
+         style="cursor: pointer"
+         title="close side menu"
+         id="myOverlay"
+      ></div>
+
+      <!-- !PAGE CONTENT! -->
+      <div class="w3-main" style="margin-left: 300px; margin-right: 40px">
+         <!-- Header -->
+         <section id="showcase">
+            <div class="w3-container" style="margin-top: 80px">
+               <h1 class="w3-jumbo"><b>Portfolio</b></h1>
+            </div>
+         </section>
+
+         <section class="section" id="fantom">
+            <h2 class="w3-xxlarge w3-text-red">Fantom</h2>
+            <hr class="custom-hr" />
+            <img src="images/fantom.jpeg" alt="fantom" width="90%" />
+            <p>Отслеживание сделок по добавлению и удалению ликвидности в сетях:</p>
+            <ul>
+               <li>etherscan.io</li>
+               <li>snowtrace.io</li>
+               <li>ftmscan.com</li>
+               <li>bscscan</li>
+               <li>arbiscan</li>
+            </ul>
+            <p>Формирование топа по частоте сделок, отслеживание крупных сделок, операций депозит и другие функции.</p>
+            <p>Отправка сигналов в телеграм. Поддержка прокси.</p>
+         </section>
+
+         <section class="section" id="arbitrator">
+            <h2 class="w3-xxlarge w3-text-red">Arbitrator (арбитражный бот)</h2>
+            <hr class="custom-hr" />
+            <img src="images/arbitrator.png" alt="fantom" width="90%" />
+            <ul class="w3-ul">
+               <li>Работа через API бирж gate.io и bybit.com</li>
+               <li>Бот отслеживает котировки Spot и Perpetual Futures обеих бирж</li>
+               <li>В зависимости от условий делает покупки и продажи в автоматическом режиме</li>
+            </ul>
+         </section>
+
+         <section class="section" id="ContractScore">
+            <h2 class="w3-xxlarge w3-text-red">ContractScore (оценивание контрактов)</h2>
+            <hr class="custom-hr" />
+            <img src="images/contractscore3.jpeg" alt="fantom" width="90%" />
+            <img src="images/contractscore1.jpeg" alt="fantom" width="90%" />
+            <p>Сбор данных сетей etherscan.io и bscscan.com и автоматическое оценивание контрактов</p>
+         </section>
+
+         <section class="section" id="sportparser">
+            <h2 class="w3-xxlarge w3-text-red">SportParser - скриптовый язык для анализа спортивных событий</h2>
+            <hr class="custom-hr" />
+            <img src="images/sp0.webp" alt="fantom" width="90%" />
+            <p>Сбор и анализ данных о спортивных событиях на сайте sofascore.com (турниры по теннису).</p>
+            <p>
+               Реализован мощный скриптовый язык с поддержкой специфических объектов предметной области. С помощью
+               скриптов пользователь задает стратегии по поиску событий в режиме реального времени, задает критерии
+               отправки сигнала, накопления статистики в базе данных.
+            </p>
+
+            <p>Примеры скрипта: см скриншоты</p>
+            <img src="images/sp1.webp" alt="fantom" width="90%" />
+            <img src="images/sp2.webp" alt="fantom" width="90%" />
+            <img src="images/sp3.webp" alt="fantom" width="90%" />
+            <img src="images/sp4.webp" alt="fantom" width="90%" />
+         </section>
+
+         <section class="section" id="telegramhelper">
+            <h2 class="w3-xxlarge w3-text-red">TelegramHelper (диспетчер сообщений Telegram)</h2>
+            <hr class="custom-hr" />
+
+            <img src="images/telegramhelper.png" alt="fantom" width="80%" />
+            <p>
+               Микросервис для отправки сообщений в Telegram. Буферизация и организация пакетной отправки сообщений,
+               поступающих из нескольких приложений.
+            </p>
+            <p>Основные функции:</p>
+            <ul class="w3-ul">
+               <li>постановка сообщений в очередь для последующей отправки в указанный канал;</li>
+               <li>
+                  склеивание нескольких сообщений в одно для снижения нагрузки в случае массированной отправки сообщений
+                  во избежание превышения лимитов и бана;
+               </li>
+               <li>отложенная отправка сообщений.</li>
+            </ul>
+         </section>
+
+         <section class="section" id="BncFutures">
+            <h2 class="w3-xxlarge w3-text-red">BncFutures (бот на фьючерсах binance)</h2>
+            <hr class="custom-hr" />
+            <img src="images/bncfutures.png" width="70%" />
+            <p>
+               Есть цена на валюту, бот следует за ценой, если цена поднимается на определенный процент за определенное
+               время (например на 2% за 30 секунд) идет сигнал на покупку по заданным параметрам и одновременно
+               выставляется стоп-лосс.
+            </p>
+         </section>
+
+         <section class="section" id="promoactions">
+            <h2 class="w3-xxlarge w3-text-red">Программа для учета промоперсонала и рекламных акций</h2>
+            <hr class="custom-hr" />
+            <img src="images/promo.png" width="90%" />
+            <p>
+               Программа для эффективной работы с документацией и ведения базы персонала. Основные возможности: анкеты
+               персонала, архив, черный список, к каждой анкете можно присоединить неограниченное количество фотографий
+               и документов любого формата. Акции формируются автоматически на основании заявок на выполнение
+               определенных видов услуг.
+            </p>
+            <p>Отчетность: ведомость заработной платы.</p>
+         </section>
+
+         <section class="section" id="writer">
+            <h2 class="w3-xxlarge w3-text-red">Технический писатель</h2>
+            <hr class="custom-hr" />
+            <p>
+               Мной написан tutorial по языку программирования python на английском языке для сайта
+               <a href="https://www.sitepoint.com/python/">SitePoint.com</a>
+            </p>
+            <img src="images/sitepoint.webp" width="80%" />
+            <p>
+               В рамках этого проекта мной был разработан скрипт, позволяющий запускать "живые" сниппеты кода на языке
+               python непосредственно на html-странице, что позволило сделать процесс обучения интерактивным.
+            </p>
+            <p>
+               Для написания учебных статей и других технических текстов использую язык разметки Markdown и его
+               расширения. Развиты навыки рецензирования и редактирования контента.
+            </p>
+            <p>Другие публикации:</p>
+            <p>
+               <a href="https://elementiss.github.io/js-tutorial/regexpr-with-flems.html"
+                  >Регулярні вирази JavaScript</a
+               >
+               - учебная статья на украинском языке об использовании регулярных выражений в языке Javascript. Текст
+               также сопровождается интерактивными фрагментами кода на javascript, иллюстрирующими концепции статьи.
+            </p>
+         </section>
+
+         <section class="section" id="opinion">
+            <h2 class="w3-xxlarge w3-text-red">Отзывы</h2>
+            <hr class="custom-hr" />
+
+            <h3>Игорь Горский</h3>
+            <p>
+               Повезло сотрудничать с Еленой около 5 лет. За это время реализовали множество больших и маленьких
+               проектов, в основном в сфере алгоримической торговли, которые затрагивают работу со множеством торговых
+               платформ и околоторговых сервисов.
+            </p>
+            <p>
+               Начинали в новой для Елены сфере, со обилием незнакомой для нее терминологии. И ее большой плюс, что она
+               не боится нового и быстро обучается. К работе подходит ответственно, профессионально, основательно.
+               Начинали с малого, но быстро перешли на довольно сложные проекты. Реализовывали простые и сложные
+               парсеры, торговые системы на различных биржах, арбитражные боты на пересечении различных торговых
+               платформ, аналитические инструменты и базы данных. Мне, как заказчику далекому от программирования, очень
+               импонировало, что можно описать алгоритм задачи, а абсолютно все технические вопросы, от выбора языка
+               программирования до проработки интерфейсов программ Елена брала на себя и к ее выбор был всегда удачным.
+               Однозначно рекомендую к сотрудничеству.
+            </p>
+            <h3>Юрий Шевченко</h3>
+            <p>Плодотворно сотрудничаю с Еленой на протяжении нескольких лет.</p>
+
+            <p>Елена занималась разработкой прикладных программ в следующих областях:</p>
+            <ul>
+               <li>обработка больших массивов данных в разных сферах;</li>
+               <li>создание программ для парсинга информации из различных источников;</li>
+               <li>систематизация, фильтрация и обработка информации в месседнжерах;</li>
+               <li>
+                  основным направлением сотрудничества были задания в сфере криптовалют: программы для анализа и
+                  обработки данных различных блокчейнов, создание ботов, создание прикладных программ для оптимизации
+                  торговли.
+               </li>
+            </ul>
+            <p>
+               Елену могу охарактеризовать как профессионального и ответственного человека. В процессе работы Елена
+               стремится детально разобраться и вникнуть в сферу, в которой предстоит работа, что позволяет быть "на
+               одном языке" в понимании техзадания.
+            </p>
+            <p>
+               Среди плюсов сотрудничества также могу отметить проактивную позицию Елены во время выполнения заданий,
+               внесение рекомендации и предложений по оптимизации процессов и программ, постоянное развитие и
+               совершенствование профессиональных навыков.
+            </p>
+            <p>Я благодарен Елене за качественное выполнение задач и приятное общение в процессе работы.</p>
+            <p>Рекомендую к сотрудничеству.</p>
+         </section>
+      </div>
+
+      <!-- Footer -->
+      <div class="w3-dark-grey w3-container w3-padding-24" style="margin-top: 70px; padding-right: 60px">
+         <p class="w3-right">&copy; 2025</p>
+      </div>
+
+      <script>
+         // Script to open and close sidebar
+         function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("myOverlay").style.display = "block";
+         }
+
+         function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("myOverlay").style.display = "none";
+         }
+      </script>
+   </body>
+</html>
